@@ -25,17 +25,6 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++20")
 # Create the executable
 add_executable(leetcode)
 
-
-
-target_include_directories(
-  leetcode
-  PUBLIC
-    /media/baki/New
-    Volume/code/cpp_programming/leetcode_problem_solving/build/_deps/catch2-src/src/catch2
-)
-
-
-
 target_link_libraries(leetcode PUBLIC Catch2::Catch2WithMain)
 
 # Add the source files
