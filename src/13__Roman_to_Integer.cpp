@@ -11,7 +11,7 @@
 
 class Solution {
 public:
-  int romanToInt(std::string s) {
+  [[nodiscard]] int romanToInt(std::string s) const noexcept {
 
     static const std::unordered_map<char, int> romanValue{
         {'I', 1},   {'V', 5},   {'X', 10},  {'L', 50},
