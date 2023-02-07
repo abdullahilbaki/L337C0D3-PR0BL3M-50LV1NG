@@ -16,12 +16,11 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(Catch2)
 
-# Create a target for the catch2 library add_library(pain INTERFACE IMPORTED)
-
 # Set C++ standard
 set(CXX_STANDARD 20)
 set(CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++20") 
+
 # Create the executable
 add_executable(leetcode)
 
