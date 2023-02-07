@@ -11,7 +11,8 @@
 
 class Solution {
 public:
-  std::vector<int> twoSum(std::vector<int> &nums, int target) {
+  [[nodiscard]] std::vector<int> twoSum(const std::vector<int> &nums,
+                                        int target) const noexcept {
 
     std::unordered_map<int, int> map{};
     std::vector<int> result{};
@@ -19,6 +20,7 @@ public:
     for (std::size_t i{}; i < nums.size(); i++) {
 
       const auto it = map.find(target - nums[i]);
+
       if (it != map.end()) {
         result.push_back(it->second);
         result.push_back(static_cast<int>(i));
